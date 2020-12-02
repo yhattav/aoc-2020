@@ -1,5 +1,6 @@
 <script>
   import { Toggle } from "carbon-components-svelte";
+    import DayUI from "../../components/DayUI.svelte";
 
     import {exampleArray, inputArray} from './day1Input.ts'
 
@@ -66,20 +67,8 @@ $: usedInput = useExample ? exampleArray : inputArray;
 </script>
 
 
-1
-<p>  
-    <Toggle labelText="Use Example Input" {toggled} on:change={toggleInput}/>
-</p>
-<p>
-    <button on:click={()=>{run(1)}}>Run1</button>
-    <button on:click={()=>{run(2)}}>Run2</button>
-</p>
-<p>    
-    {res}
-</p>
-<p>
-in {time};
-</p>
+<DayUI {res} {time} {toggleInput} {run} {toggled}/>
+
 
 
 <style>
