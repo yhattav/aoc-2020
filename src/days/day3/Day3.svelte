@@ -1,6 +1,21 @@
 <script lang="ts">
-    import { Toggle } from "carbon-components-svelte";
+
+    import { 
+    Toggle,
+    Tile,
+    Button,
+    Grid,
+    Row,
+    Column,
+    Tabs,
+    TabContent,
+    Tab,
+    Select,
+    PaginationNav,
+    SelectItem, 
+    } from "carbon-components-svelte";
     import {script1, script2} from './day3script.ts'
+    import DayUI from "../../components/DayUI.svelte";
 
 // ------------------------ OPERATIONAL ------------------------------ //
     let res = 'no answer yet';
@@ -27,21 +42,9 @@
     }
 
 </script>
-2 
-<p>  
-    <Toggle labelText="Use Example Input" {toggled} on:change={toggleInput}/>
-</p>
-<p>
-    <button on:click={()=>{run(1)}}>Run1</button>
-    <button on:click={()=>{run(2)}}>Run2</button>
-</p>
-<p>    
-    {res}
-</p>
-<p>
-in {time};
-</p>
 
+
+<DayUI {res} {time} {toggleInput} {run} {toggled}/>
 
 <style>
 
