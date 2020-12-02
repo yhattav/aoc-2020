@@ -27,13 +27,6 @@
         }
     };
 
-    let res='no answer yet';
-    let time = 'X';
-    let initUseExample = window.localStorage.aocUseExample;
-    let usedInput = initUseExample ? exampleArray : inputArray;
-    let toggled = initUseExample === 'true';
-    let useExample;
-
     async function script2() {
         let _res = await findThree();
         return _res;
@@ -42,6 +35,15 @@
         let _res = await findTwo();
         return _res;
     }
+
+
+// ------------------------ OPERATIONAL ------------------------------ //
+    let res = 'no answer yet';
+    let time = 'X';
+    let initUseExample = window.localStorage.aocUseExample === 'true';
+    let usedInput = initUseExample ? exampleArray : inputArray;
+    let toggled = initUseExample;
+    let useExample = initUseExample;
 
     function toggleInput(event) {
         useExample = event.target.checked;
@@ -61,8 +63,9 @@
     }
 
 $: usedInput = useExample ? exampleArray : inputArray;
-
 </script>
+
+
 1
 <p>  
     <Toggle labelText="Use Example Input" {toggled} on:change={toggleInput}/>

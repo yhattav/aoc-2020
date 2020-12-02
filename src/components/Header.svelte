@@ -13,7 +13,6 @@
 
   const ctx: { dark: any; light: any; updateVar: any } = getContext("Theme");
   const pagination = getContext("Pagination");
-  console.log(pagination);
   $: if (ctx) {
     ctx.dark.subscribe((value) => {
     });
