@@ -1,15 +1,14 @@
 <script>
-  import { Toggle } from "carbon-components-svelte";
+    import { Toggle } from "carbon-components-svelte";
 
     import {exampleArray, inputArray} from './day2Input.ts'
-    console.log(inputArray)
 
     async function script1() {
-        let _res = countValidPasswords(inputArray) ;
+        let _res = countValidPasswords(usedInput) ;
         return _res;
     }
     async function script2() {
-        let _res = countValidPasswords2(inputArray)
+        let _res = countValidPasswords2(usedInput) ;
         return _res;
     }
 
@@ -66,13 +65,12 @@ function isValidPassword2(passwordData) {
 
 
 // ------------------------ OPERATIONAL ------------------------------ //
-    let res='no answer yet';
+    let res = 'no answer yet';
     let time = 'X';
-    let initUseExample = window.localStorage.aocUseExample;
+    let initUseExample = window.localStorage.aocUseExample === 'true';
     let usedInput = initUseExample ? exampleArray : inputArray;
-    let toggled = initUseExample === 'true';
-    let useExample;
-
+    let toggled = initUseExample;
+    let useExample = initUseExample;
 
     function toggleInput(event) {
         useExample = event.target.checked;
@@ -92,7 +90,6 @@ function isValidPassword2(passwordData) {
     }
 
 $: usedInput = useExample ? exampleArray : inputArray;
-
 </script>
 2 
 <p>  

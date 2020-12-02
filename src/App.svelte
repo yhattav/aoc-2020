@@ -31,13 +31,10 @@
     getCurrentPage,
   })
   let currentPageIndex = getLocalPage();
-  console.log(currentPageIndex);
   function getLocalPage() {
-    console.log(window.localStorage.aocLocalPage);
     return Number(window.localStorage.aocLocalPage || 0);
   }
   function pageChanged(pageIndex: number) {
-    console.log('pageChanged', pageIndex);
     if (typeof pageIndex == "number") {
       window.localStorage.aocLocalPage = pageIndex;
     currentPageIndex = pageIndex;
