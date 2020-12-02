@@ -4,6 +4,7 @@
     const pages = {
         "1":  () => import(`../days/day1/Day1.svelte`).catch(e=>console.error(e)),
         "2":  () => import(`../days/day2/Day2.svelte`).catch(e=>console.error(e)),
+        "3":  () => import(`../days/day3/Day3.svelte`).catch(e=>console.error(e)),
       };
 
 
