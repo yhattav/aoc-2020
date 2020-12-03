@@ -39,7 +39,6 @@ b = findHitTrees(1,3,inputArray);
 c = findHitTrees(1,5,inputArray);
 d = findHitTrees(1,7,inputArray);
 e = findHitTrees(2,1,inputArray);
-console.log(a,b,c,d,e);
 
 __res = (a*b*c*d*e);
 return __res;
