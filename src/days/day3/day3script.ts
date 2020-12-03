@@ -12,16 +12,12 @@ export async function script2(useExample: boolean) {
 }
 
 function findHitTrees(y: number, x: number, inputArray) {
-    console.log(inputArray);
     const treeLines = inputArray.length;
     const mod = inputArray[0].length;
-    console.log(treeLines,mod);
     let __res = 0;
     for (let i = 0+y; i < treeLines; i+=y) {
         let checkedIndex = i/y * x;
         let checkedIndexMod = checkedIndex % mod;
-        console.log({checkedIndex,checkedIndexMod})
-        console.log(i);
         if(inputArray[i][checkedIndexMod] === '#') {
             __res++;
         }
