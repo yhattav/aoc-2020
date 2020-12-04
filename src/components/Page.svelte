@@ -6,6 +6,7 @@
         "2":  () => import(`../days/day2/Day2.svelte`).catch(e=>console.error(e)),
         "3":  () => import(`../days/day3/Day3.svelte`).catch(e=>console.error(e)),
         "4":  () => import(`../days/day4/Day4.svelte`).catch(e=>console.error(e)),
+        "5":  () => import(`../days/day5/Day5.svelte`).catch(e=>console.error(e)),
       };
 
 
