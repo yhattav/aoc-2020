@@ -1,5 +1,5 @@
 import {exampleArray, inputArray} from './day6Input'
-
+import {countUnique} from '../../utils/utils'
 export async function script1(useExample: boolean) {
     const usedInput = useExample ? exampleArray : inputArray;
     let _res 
@@ -24,10 +24,6 @@ function countThem(inputArray) {
     });
     return res;
 }
-
-function countUnique(iterable) {
-    return new Set(iterable).size;
-  }
 
 function countThem2(inputArray) {
     let res = 0;
