@@ -30,4 +30,14 @@ let getTwoElementsToMatchSum = (array, sum) => { //returns array pairs whos sum 
         return result;
     }
 
-export {countUnique, getTwoElementsToMatchSum, getSubsetsEqualsSum};
+function createMatrix(yLength, xLength, fillWith = ' ') {
+    let row = new Array(xLength);
+    row.fill(fillWith);
+    let newArray = new Array(yLength).fill([]);
+    newArray = newArray.map(element=>
+        row.slice(0)
+    );
+    return newArray;
+}
+
+export {countUnique, getTwoElementsToMatchSum, getSubsetsEqualsSum, createMatrix};
