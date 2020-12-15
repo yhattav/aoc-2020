@@ -16,6 +16,7 @@
         "12":  () => import(`../days/day12/Day12.svelte`).catch(e=>console.error(e)),
         "13":  () => import(`../days/day13/Day13.svelte`).catch(e=>console.error(e)),
         "14":  () => import(`../days/day14/Day14.svelte`).catch(e=>console.error(e)),
+        "15":  () => import(`../days/day15/Day15.svelte`).catch(e=>console.error(e)),
       };
 
 
