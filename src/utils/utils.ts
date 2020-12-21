@@ -16,7 +16,9 @@ let getTwoElementsToMatchSum = (array, sum) => { //returns array pairs whos sum 
     return results;
 }
 
-
+    function getIntersection(array1,array2) {
+        return array1.filter(element => array2.includes(element));
+    }
     function getSubsetsEqualsSum(array, sum) { //returns array of subsets whos sum equals the defined sum
         function iter(temp, delta, index) {
             if (!delta) result.push(temp);
@@ -40,4 +42,4 @@ function createMatrix(yLength, xLength, fillWith = ' ') {
     return newArray;
 }
 
-export {countUnique, getTwoElementsToMatchSum, getSubsetsEqualsSum, createMatrix};
+export {countUnique, getTwoElementsToMatchSum, getSubsetsEqualsSum, createMatrix, getIntersection};
