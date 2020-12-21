@@ -3,13 +3,13 @@ import {getIntersection} from '../../utils/utils'
 export async function script1(useExample: boolean) {
     const usedInput = useExample ? exampleArray : inputArray;
     let _res 
-    _res = run(usedInput);
+    _res = run(usedInput,false);
     return _res;
 }
 export async function script2(useExample: boolean) {
     const usedInput = useExample ? exampleArray : inputArray;
     let _res 
-    _res = (usedInput);
+    _res = run(usedInput,true);
     return _res;
 }
 
@@ -37,7 +37,7 @@ function getMappedAllergens(inputArray) {
     return {allergensMap,totalIngrediantsList}
 }
 
-function run(inputArray) {
+function run(inputArray,shouldProduceList) {
     let {allergensMap,totalIngrediantsList} = getMappedAllergens(inputArray)
     let allergenPosMap = getAllergenPosMap(allergensMap);
     let allergensList = []
@@ -51,7 +51,12 @@ function run(inputArray) {
     allergensList.forEach(val=>{
         totalIngrediantsList = totalIngrediantsList.filter(e => e !== val)
     })
-    return totalIngrediantsList.length;
+    if(shouldProduceList) {
+        console.warn(allergensMap);
+        return produceCanonicalList(allergensMap,allergensList)
+    } else {
+        return totalIngrediantsList.length;
+    }
 }
 
 function getAllergenPosMap(allergensMap) {
@@ -104,3 +109,12 @@ function matchAndRemoveSingles(allergenPosMap,allergensMap,cache) {
         worked: found.length !== 0,
     }
 }
+
+function produceCanonicalList(allergensMap,allergensList) {
+    allergensList.sort((a, b) => (getKey(allergensMap,a) < getKey(allergensMap,b) ? -1 : 1))
+    return allergensList.join(',');
+}
+
+function getKey(map,value) {
+    return [...map].find(([key, val]) => val == value)[0]
+  }
