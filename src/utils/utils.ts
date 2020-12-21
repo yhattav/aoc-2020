@@ -42,4 +42,18 @@ function createMatrix(yLength, xLength, fillWith = ' ') {
     return newArray;
 }
 
-export {countUnique, getTwoElementsToMatchSum, getSubsetsEqualsSum, createMatrix, getIntersection};
+function getMapKeyByValue(map,value) {
+    return [...map].find(([key, val]) => val == value)[0]
+  }
+
+export {
+    //array
+    countUnique,
+    getTwoElementsToMatchSum,
+    getSubsetsEqualsSum,
+    getIntersection,
+    //matrix
+    createMatrix,
+    //map
+    getMapKeyByValue,
+};
