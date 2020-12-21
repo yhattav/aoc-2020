@@ -23,6 +23,7 @@
         "19":  () => import(`../days/day19/Day19.svelte`).catch(e=>console.error(e)),
         "20":  () => import(`../days/day20/Day20.svelte`).catch(e=>console.error(e)),
         "21":  () => import(`../days/day21/Day21.svelte`).catch(e=>console.error(e)),
+        "22":  () => import(`../days/day22/Day22.svelte`).catch(e=>console.error(e)),
       };
 
 
