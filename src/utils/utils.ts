@@ -2,6 +2,12 @@ function countUnique(iterable) {
     return new Set(iterable).size;
 }
 
+let sumArrayOfNumbers = (array: number[]) => {
+    let reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+    return array.reduce(reducer);
+}
+
 
 let getTwoElementsToMatchSum = (array, sum) => { //returns array pairs whos sum equals given sum
     let hashMap = {},
@@ -55,5 +61,6 @@ export {
     //matrix
     createMatrix,
     //map
+    sumArrayOfNumbers,
     getMapKeyByValue,
 };

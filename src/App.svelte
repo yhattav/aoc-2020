@@ -18,7 +18,6 @@
   import Header from "./components/Header.svelte";
   import Theme from "./components/Theme.svelte";
   import Page from "./components/Page.svelte";
-  import Day1 from "./days/day1/Day1.svelte";
 
 
   let theme: "g10" = "g10";
@@ -30,9 +29,23 @@
     getLocalPage,
     getCurrentPage,
   })
+  setContext('Years', {
+    handleYearChange: (yearIndex: number) => {
+      yearChanged(yearIndex);
+    },
+    getLocalYear,
+    getCurrentYear,
+  })
   let currentPageIndex = getLocalPage();
   function getLocalPage() {
+    console.log(window.localStorage.aocLocalYear)
+
     return Number(window.localStorage.aocLocalPage || 0);
+  }
+  let currentYearIndex = getLocalYear();
+  function getLocalYear() {
+    console.log(window.localStorage.aocLocalYear)
+    return Number(window.localStorage.aocLocalYear || 0);
   }
   function pageChanged(pageIndex: number) {
     if (typeof pageIndex == "number") {
@@ -40,18 +53,19 @@
     currentPageIndex = pageIndex;
     }
   }
+  function yearChanged(yearIndex: number) {
+    if (typeof yearIndex == "number") {
+      window.localStorage.aocLocalYear = yearIndex;
+      currentYearIndex = yearIndex;
+    }
+  }
   function getCurrentPage() {
     return currentPageIndex;
   }
-  // function loadPage(pageIndex: numebr) {
-  //   // import(`./days/day${pageIndex+1}/Day${pageIndex+1}.svelte`).then(module=>{
-  //   import(`./days/day1/Day1.svelte`).then((module)=>{
-  //     PageComponent = module.default;
-  //   }).catch(error=>{
-  //     console.error(error);
-  //   });
-  // };
-  // $: loadPage(currentPageIndex);
+  function getCurrentYear() {
+    return currentYearIndex;
+  }
+
 </script>
 
 <Theme persist bind:theme>
@@ -60,7 +74,7 @@
     <Grid>
       <Row>
         <Column noGutter>
-        <Page {currentPageIndex}/>
+        <Page {currentPageIndex} {currentYearIndex}/>
         </Column>
       </Row>
     </Grid>
