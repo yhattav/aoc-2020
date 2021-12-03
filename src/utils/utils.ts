@@ -51,13 +51,18 @@ function createMatrix(yLength, xLength, fillWith = ' ') {
 function getMapKeyByValue(map,value) {
     return [...map].find(([key, val]) => val == value)[0]
   }
+  function binStringToDecimal(binaryString: string) {
+      return parseInt(binaryString, 2)
+  }
 
+//copy($0.getInnerHTML().split("\n").slice(0,-1))
 export {
     //array
     countUnique,
     getTwoElementsToMatchSum,
     getSubsetsEqualsSum,
     getIntersection,
+    binStringToDecimal,
     //matrix
     createMatrix,
     //map
