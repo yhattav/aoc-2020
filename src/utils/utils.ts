@@ -55,9 +55,25 @@ function getMapKeyByValue(map,value) {
       return parseInt(binaryString, 2)
   }
 
+  function transposeArray(array, arrayLength){
+    var newArray = [];
+    for(var i = 0; i < array.length; i++){
+        newArray.push([]);
+    };
+
+    for(var i = 0; i < array.length; i++){
+        for(var j = 0; j < arrayLength; j++){
+            newArray[j].push(array[i][j]);
+        };
+    };
+
+    return newArray;
+}
+
 //copy($0.getInnerHTML().split("\n").slice(0,-1))
 export {
     //array
+    transposeArray,
     countUnique,
     getTwoElementsToMatchSum,
     getSubsetsEqualsSum,
