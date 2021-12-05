@@ -14,7 +14,7 @@
     PaginationNav,
     SelectItem, 
     } from "carbon-components-svelte";
-    import {script1, script2} from './day10script.ts'
+    import {script1, script2} from './day10script'
     import DayUI from "../../../components/DayUI.svelte";
 
 // ------------------------ OPERATIONAL ------------------------------ //
