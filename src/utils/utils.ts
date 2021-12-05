@@ -69,10 +69,14 @@ function getMapKeyByValue(map,value) {
 
     return newArray;
 }
+const getAngle = (p1,p2) =>{
+    return Math.atan2(p2[0] - p1[0], p2[1] - p1[1]) * 180 / Math.PI;
+}
 
 //copy($0.getInnerHTML().split("\n").slice(0,-1))
 export {
     //array
+    getAngle,
     transposeArray,
     countUnique,
     getTwoElementsToMatchSum,
