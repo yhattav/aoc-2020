@@ -1,5 +1,5 @@
 import {exampleArray, inputArray} from './day4Input'
-import { transposeArray } from '../../../utils/utils';
+import { transposeMatrix } from '../../../utils/utils';
 export async function script1(useExample: boolean) {
     const usedInput = useExample ? exampleArray : inputArray;
     let _res 
@@ -96,7 +96,7 @@ const createPos = (array) => {
         board.forEach(line=>{
             pos.push(line);
         })
-        let transposedArray = transposeArray(board, board[0].length);
+        let transposedArray = transposeMatrix(board, board[0].length);
         transposedArray.forEach(line=>{
             pos.push(line);
         })

@@ -38,7 +38,7 @@ let getTwoElementsToMatchSum = (array, sum) => { //returns array pairs whos sum 
         return result;
     }
 
-function createMatrix(yLength, xLength, fillWith = ' ') {
+function createMatrix(yLength:number, xLength:number, fillWith: number | string = ' ') {
     let row = new Array(xLength);
     row.fill(fillWith);
     let newArray = new Array(yLength).fill([]);
@@ -55,7 +55,7 @@ function getMapKeyByValue(map,value) {
       return parseInt(binaryString, 2)
   }
 
-  function transposeArray(array, arrayLength){
+  function transposeMatrix(array, arrayLength){
     var newArray = [];
     for(var i = 0; i < array.length; i++){
         newArray.push([]);
@@ -77,7 +77,7 @@ const getAngle = (p1,p2) =>{
 export {
     //array
     getAngle,
-    transposeArray,
+    transposeMatrix,
     countUnique,
     getTwoElementsToMatchSum,
     getSubsetsEqualsSum,
