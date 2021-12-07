@@ -72,6 +72,40 @@ function getMapKeyByValue(map,value) {
 const getAngle = (p1,p2) =>{
     return Math.atan2(p2[0] - p1[0], p2[1] - p1[1]) * 180 / Math.PI;
 }
+const calcMean = (numbers) => numbers.reduce((acc, val) => acc + val, 0) / numbers.length;
+
+const calcMedian = arr => {
+    const mid = Math.floor(arr.length / 2),
+      nums = [...arr].sort((a, b) => a - b);
+    return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+  };
+
+// function calcMode(numbers) {
+
+//     var modes = [], count = [], i, number, maxIndex = 0;
+
+//     for (i = 0; i < numbers.length; i += 1) {
+//         number = numbers[i];
+//         count[number] = (count[number] || 0) + 1;
+//         if (count[number] > maxIndex) {
+//             maxIndex = count[number];
+//         }
+//     }
+
+//     for (i in count)
+//         if (count.hasOwnProperty(i)) {
+//             if (count[i] === maxIndex) {
+//                 modes.push(Number(i));
+//             }
+//         }
+
+//     return modes;
+// }
+
+// function range(numbers) {
+//     numbers.sort();
+//     return [numbers[0], numbers[numbers.length - 1]];
+// }
 
 //copy($0.getInnerHTML().split("\n").slice(0,-1))
 export {
@@ -88,4 +122,12 @@ export {
     //map
     sumArrayOfNumbers,
     getMapKeyByValue,
+
+    calcMean,
+    calcMedian,
+    // calcMode,
+    // range,
 };
+
+
+
