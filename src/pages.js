@@ -25,7 +25,7 @@ export const pages = {
     "23":  () => import(`./days/2020/day23/Day23.svelte`).catch(e=>console.error(e)),
     "24":  () => import(`./days/2020/day24/Day24.svelte`).catch(e=>console.error(e)),
     "25":  () => import(`./days/2020/day25/Day25.svelte`).catch(e=>console.error(e)),
-  }, 
+  },
   "2021": {
     "1":  () => import(`./days/2021/day1/Day1.svelte`).catch(e=>console.error(e)),
     "2":  () => import(`./days/2021/day2/Day2.svelte`).catch(e=>console.error(e)),
@@ -35,5 +35,6 @@ export const pages = {
     "6":  () => import(`./days/2021/day6/Day6.svelte`).catch(e=>console.error(e)),
     "7":  () => import(`./days/2021/day7/Day7.svelte`).catch(e=>console.error(e)),
     "8":  () => import(`./days/2021/day8/Day8.svelte`).catch(e=>console.error(e)),
+    "9":  () => import(`./days/2021/day9/Day9.svelte`).catch(e=>console.error(e)),
   }
 };
