@@ -10,7 +10,7 @@ let PageComponent;
   function loadPage(pageIndex: number, yearIdx: number) {
     const page = `${Math.min(numOfAvailablePages-1,pageIndex)+1}`;
     const year = `${yearIdx + 2020}`;
-    console.log('Loading page:', page, ' Of AOC ', year);
+    console.log('Loading page:', page, ', AOC ', year);
     let pageLoader = pages[year][page];
     pageLoader().then(module=>{
       PageComponent = module.default;

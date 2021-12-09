@@ -27,14 +27,12 @@
   let startYear = years.getCurrentYear();
   let sellectedYear = startYear;
   $: numOfAvailablePages = Object.keys(pages[`${sellectedYear+2020}`]).length;
-  console.log('>>>>>>>>>>>',startYear)
   function handlePageChange(event: event) {
     const pageIndex = event.detail.page;
     pagination.handlePageChange(pageIndex);
   }
   function handleYearChange(yearIndex) {
 
-    console.log(yearIndex)
     // const yearIndex = event.detail.page;
     years.handleYearChange(yearIndex);
   }

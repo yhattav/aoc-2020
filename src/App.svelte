@@ -38,13 +38,11 @@
   })
   let currentPageIndex = getLocalPage();
   function getLocalPage() {
-    console.log(window.localStorage.aocLocalYear)
 
     return Number(window.localStorage.aocLocalPage || 0);
   }
   let currentYearIndex = getLocalYear();
   function getLocalYear() {
-    console.log(window.localStorage.aocLocalYear)
     return Number(window.localStorage.aocLocalYear || 0);
   }
   function pageChanged(pageIndex: number) {
