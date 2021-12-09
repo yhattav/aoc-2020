@@ -8,6 +8,14 @@ let sumArrayOfNumbers = (array: number[]) => {
     return array.reduce(reducer);
 }
 
+let deepCopyMultiDimensionalArray = (array: [][]) => {
+    var newArray = [];
+    for (var i = 0; i < array.length; i++) {
+        newArray[i] = array[i].slice();
+    }
+    return newArray;
+}
+
 
 let getTwoElementsToMatchSum = (array, sum) => { //returns array pairs whos sum equals given sum
     let hashMap = {},
@@ -127,6 +135,7 @@ export {
     calcMedian,
     // calcMode,
     // range,
+    deepCopyMultiDimensionalArray,
 };
 
 
