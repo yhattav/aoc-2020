@@ -47,6 +47,7 @@ export {
     getPositionAt,
     protectedGetValueAt,
     findPosibilities, // not battle hardened yet
+    isValidPosition,
 };
 
 
