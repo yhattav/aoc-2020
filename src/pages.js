@@ -39,5 +39,6 @@ export const pages = {
     "10":  () => import(`./days/2021/day10/Day10.svelte`).catch(e=>console.error(e)),
     "11":  () => import(`./days/2021/day11/Day11.svelte`).catch(e=>console.error(e)),
     "12":  () => import(`./days/2021/day12/Day12.svelte`).catch(e=>console.error(e)),
+    "13":  () => import(`./days/2021/day13/Day13.svelte`).catch(e=>console.error(e)),
   }
 };
