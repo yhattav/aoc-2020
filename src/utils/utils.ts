@@ -88,6 +88,14 @@ const calcMedian = arr => {
     return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
   };
 
+  const isLowerCase = (str)=>{
+    if(str.toLowerCase() === str) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 // function calcMode(numbers) {
 
 //     var modes = [], count = [], i, number, maxIndex = 0;
@@ -118,6 +126,7 @@ const calcMedian = arr => {
 //copy($0.getInnerHTML().split("\n").slice(0,-1))
 export {
     //array
+    isLowerCase,
     getAngle,
     transposeMatrix,
     countUnique,
