@@ -7,17 +7,10 @@
     Grid,
     Row,
     Column,
-    Tabs,
-    TabContent,
-    Tab,
-    Select,
-    PaginationNav,
-    SelectItem, 
     } from "carbon-components-svelte";
 
 // ------------------------ OPERATIONAL ------------------------------ //
-    export let res,time,toggled,toggleInput, run;
-
+    export let res,time,toggled,toggleInput,run,CustomComponent;
 </script>
 
 
@@ -32,9 +25,13 @@
 </Tile>
         </Column>
         <Column>
-                <h2>    
-            {res}
-        </h2>
+            <h2>    
+            {#if typeof CustomComponent === 'function'}
+                <svelte:component this={CustomComponent} {res}/>
+            {:else}
+                {res}
+            {/if}
+            </h2>
         <p>
             in {time};
         </p>
