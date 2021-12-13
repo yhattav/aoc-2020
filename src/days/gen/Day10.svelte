@@ -1,19 +1,5 @@
 <script lang="ts">
 
-    import { 
-    Toggle,
-    Tile,
-    Button,
-    Grid,
-    Row,
-    Column,
-    Tabs,
-    TabContent,
-    Tab,
-    Select,
-    PaginationNav,
-    SelectItem, 
-    } from "carbon-components-svelte";
     import {script1, script2} from './day10script'
     import DayUI from "../../../components/DayUI.svelte";
 
