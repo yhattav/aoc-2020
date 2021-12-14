@@ -41,5 +41,16 @@ export const pages = {
     "12":  () => import(`./days/2021/day12/Day12.svelte`).catch(e=>console.error(e)),
     "13":  () => import(`./days/2021/day13/Day13.svelte`).catch(e=>console.error(e)),
     "14":  () => import(`./days/2021/day14/Day14.svelte`).catch(e=>console.error(e)),
+    "15":  () => import(`./days/2021/day15/Day15.svelte`).catch(e=>console.error(e)),
+    // "16":  () => import(`./days/2021/day16/Day16.svelte`).catch(e=>console.error(e)),
+    // "17":  () => import(`./days/2021/day17/Day17.svelte`).catch(e=>console.error(e)),
+    // "18":  () => import(`./days/2021/day18/Day18.svelte`).catch(e=>console.error(e)),
+    // "19":  () => import(`./days/2021/day19/Day19.svelte`).catch(e=>console.error(e)),
+    // "20":  () => import(`./days/2021/day20/Day20.svelte`).catch(e=>console.error(e)),
+    // "21":  () => import(`./days/2021/day21/Day21.svelte`).catch(e=>console.error(e)),
+    // "22":  () => import(`./days/2021/day22/Day22.svelte`).catch(e=>console.error(e)),
+    // "23":  () => import(`./days/2021/day23/Day23.svelte`).catch(e=>console.error(e)),
+    // "24":  () => import(`./days/2021/day24/Day24.svelte`).catch(e=>console.error(e)),
+    // "25":  () => import(`./days/2021/day25/Day25.svelte`).catch(e=>console.error(e)),
   }
 };
