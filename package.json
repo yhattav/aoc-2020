@@ -8,7 +8,7 @@
     "validate": "svelte-check"
   },
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "sirv-cli": "^1.0.0",
     "victor": "^1.1.0"
   },
