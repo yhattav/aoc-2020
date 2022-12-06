@@ -31,7 +31,7 @@ const getDiffRegAt = (index:number):string => {
 }
 
 
-const run = (input, numOfChars) => {
+export const run = (input, numOfChars) => {
     var reg = new RegExp(getDiffCharRegex(numOfChars));
     let match = reg.exec(input);
     return match.index+numOfChars;
