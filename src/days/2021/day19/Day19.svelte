@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import {script1, script2} from './day10script'
+    import {script1, script2} from './day19script'
     import DayUI from "../../../components/DayUI.svelte";
 
 // ------------------------ OPERATIONAL ------------------------------ //
