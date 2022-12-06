@@ -43,7 +43,7 @@
   <Dropdown
   bind:selectedIndex={sellectedYear}
 
-  items={[{ id: '2020', text: '2020' }, { id: '2021', text: '2021' }]}
+  items={[{ id: '2020', text: '2020' }, { id: '2021', text: '2021' }, { id: '2022', text: '2022' }]}
 />
   <HeaderUtilities>
     <PaginationNav page={startPage} total={numOfAvailablePages} on:change={handlePageChange} />
