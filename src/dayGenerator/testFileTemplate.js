@@ -6,7 +6,7 @@ const code =
     `
     var assert = require('assert');
     var day = require('./day`+day+`script.ts')
-    var inputs = require('./day`+day+`Input.ts')
+    var inputs = require('./day`+day+`input.ts')
     
     describe('2022-day`+day+`', function () {
       describe('part1', function () {
