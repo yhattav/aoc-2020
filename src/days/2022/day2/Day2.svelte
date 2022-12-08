@@ -1,4 +1,5 @@
-<script lang="ts">
+
+    <script lang="ts">
 
     import {script1, script2} from './day2script'
     import DayUI from "../../../components/DayUI.svelte";
@@ -35,3 +36,4 @@
 <style>
 
 </style>
+      

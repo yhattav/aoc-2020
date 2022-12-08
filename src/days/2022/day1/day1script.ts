@@ -1,38 +1,20 @@
-import {example, input} from './day1Input'
+
+    import {exampleArray, inputArray} from './day1input'
 export async function script1(useExample: boolean) {
-    const usedInput = useExample ? example : input;
+    const usedInput = useExample ? exampleArray : inputArray;
     let _res 
-    _res = run(usedInput,4);
+    _res = run(usedInput);
     return _res;
 }
 export async function script2(useExample: boolean) {
-    const usedInput = useExample ? example : input;
+    const usedInput = useExample ? exampleArray : inputArray;
     let _res 
-    _res = run(usedInput,14);
+    _res = run(usedInput);
     return _res;
 }
-const getDiffCharRegex = (numOfDiffChars:number):string => {
-    let reg = `(.)`;
-if (numOfDiffChars > 0) {
-    for (let i = 1; i < numOfDiffChars; i++) {
-        reg+=getDiffRegAt(i)
-    }
-}
-return reg
+
+export const run = (input) => {
+
 }
 
-const getDiffRegAt = (index:number):string => {
-    let add = `(?!\\1`
-    for (let i = 1; i < index; i++) {
-        add += `|\\${i+1}`;
-    }
-    add += `)(.)`
-    return add;
-}
-
-
-export const run = (input, numOfChars) => {
-    var reg = new RegExp(getDiffCharRegex(numOfChars));
-    let match = reg.exec(input);
-    return match.index+numOfChars;
-}
+      
