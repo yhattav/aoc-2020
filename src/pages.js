@@ -55,7 +55,7 @@ export const pages = {
   },
   "2022": {
     "1":  () => import(`./days/2022/day1/Day1.svelte`).catch(e=>console.error(e)),
-    "2":  () => import(`./days/2022/day2/Day2.svelte`).catch(e=>console.error(e)),
+    // "2":  () => import(`./days/2022/day2/Day2.svelte`).catch(e=>console.error(e)),
     // "3":  () => import(`./days/2022/day3/Day3.svelte`).catch(e=>console.error(e)),
     // "4":  () => import(`./days/2022/day4/Day4.svelte`).catch(e=>console.error(e)),
     // "5":  () => import(`./days/2022/day5/Day5.svelte`).catch(e=>console.error(e)),
