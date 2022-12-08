@@ -4,7 +4,7 @@ module.exports = ({
 }) => {
 const code =
     `
-    import {exampleArray, inputArray} from './day`+day+`Input'
+    import {exampleArray, inputArray} from './day`+day+`input'
 export async function script1(useExample: boolean) {
     const usedInput = useExample ? exampleArray : inputArray;
     let _res 
