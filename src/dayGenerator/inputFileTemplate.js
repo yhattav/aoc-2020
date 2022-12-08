@@ -1,3 +1,7 @@
+module.exports = ({
+}) => {
+const code =
+    `
 // Copy the input from the AoC website and paste it here
 const example = '';
 const input = '';
@@ -7,3 +11,11 @@ console.log(exampleArray)
 const inputArray = input;
 
 export {exampleArray, inputArray};
+      `;
+
+  return [
+    code,
+    '',
+  ].join('\n');
+  // #endregion
+};

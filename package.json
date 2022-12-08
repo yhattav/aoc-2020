@@ -7,9 +7,11 @@
     "start": "sirv public -p 3000",
     "validate": "svelte-check",
     "test": "jest",
-    "test-watch": "jest --watch"
+    "test-watch": "jest --watch",
+    "create-day": "node ./src/dayGenerator/testGenerator.js"
   },
   "dependencies": {
+    "fs-extra": "^11.1.0",
     "lodash": "^4.17.21",
     "sirv-cli": "^1.0.0",
     "victor": "^1.1.0"
