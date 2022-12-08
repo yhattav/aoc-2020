@@ -1,4 +1,4 @@
-import {exampleArray, inputArray} from './day7Input'
+import {exampleArray, inputArray} from './day7input'
 export async function script1(useExample: boolean) {
     const usedInput = useExample ? exampleArray : inputArray;
     let _res 

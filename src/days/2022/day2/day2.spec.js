@@ -1,9 +1,9 @@
 
     var assert = require('assert');
-    var day = require('./day1script.ts')
-    var inputs = require('./day1input.ts')
+    var day = require('./day2script.ts')
+    var inputs = require('./day2input.ts')
     
-    describe('2022-day1', function () {
+    describe('2022-day2', function () {
       describe('part1', function () {
         it('should work on examples', function () {
           assert.equal(
