@@ -77,7 +77,7 @@ export const pages = {
     "21":  () => import(`./days/2022/day21/Day21.svelte`).catch(e=>console.error(e)),
     "22":  () => import(`./days/2022/day22/Day22.svelte`).catch(e=>console.error(e)),
     "23":  () => import(`./days/2022/day23/Day23.svelte`).catch(e=>console.error(e)),
-    // "24":  () => import(`./days/2022/day24/Day24.svelte`).catch(e=>console.error(e)),
-    // "25":  () => import(`./days/2022/day25/Day25.svelte`).catch(e=>console.error(e)),
+    "24":  () => import(`./days/2022/day24/Day24.svelte`).catch(e=>console.error(e)),
+    "25":  () => import(`./days/2022/day25/Day25.svelte`).catch(e=>console.error(e)),
   }
 };
