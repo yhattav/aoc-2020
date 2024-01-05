@@ -124,6 +124,19 @@ const calcMedian = arr => {
 // }
 
 //copy($0.getInnerHTML().split("\n").slice(0,-1))
+const findLocations = (regex: RegExp, input:  string[]) => {
+    let res = [];
+    input.forEach((str, i) => {
+        let matches = str.matchAll(regex);
+        if (matches) {
+            for (const match of matches) {
+                // console.log('match', match)
+                res.push({number: match[0], line: i, start: match.index, end: match.index + match[0].length});
+            }
+        }
+    });
+    return res;
+};
 export {
     //array
     isLowerCase,
@@ -144,6 +157,7 @@ export {
     calcMedian,
     // calcMode,
     // range,
+    findLocations,
     deepCopyMultiDimensionalArray,
 };
 

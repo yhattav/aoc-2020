@@ -1,5 +1,5 @@
 
-    import { exampleArray, inputArray } from './day1Input';
+    import {exampleArray, inputArray} from './day1input'
 export async function script1(useExample: boolean) {
     const usedInput = useExample ? exampleArray : inputArray;
     let _res 
